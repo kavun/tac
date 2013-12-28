@@ -16,6 +16,9 @@ html, body {
 }
 ::-moz-selection { color: inherit; background-color: transparent; }
 ::selection { color: inherit; background-color: transparent; }
+*:hover, *:active, *:focus {
+	background-color: transparent;
+}
 #board {
 	height: 100%;
 	background: #504B3F;
