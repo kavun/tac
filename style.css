@@ -13,6 +13,9 @@ html, body {
 	-ms-user-select: none;
 	user-select: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
 }
 ::-moz-selection { color: inherit; background-color: transparent; }
 ::selection { color: inherit; background-color: transparent; }
