@@ -1,0 +1,26 @@
+{
+  "name": "tac",
+  "version": "1.0.0",
+  "description": "tic tac toe",
+  "main": "tac.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kavun/tac.git"
+  },
+  "homepage": "https://kavun.github.io/tac",
+  "author": "Kevin Reed",
+  "license": "MIT",
+  "gitHead": "2e315699be15aad919ff1842002149f52a4ce486",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.14",
+    "gulp-jshint": "~1.4.0",
+    "jshint-stylish": "~0.1.5",
+    "gulp-browserify": "~0.4.2",
+    "gulp-rename": "~1.0.0",
+    "gulp-uglify": "~0.2.0",
+    "gulp-size": "~0.1.2",
+    "gulp-header": "~1.0.2"
+  }
+}
