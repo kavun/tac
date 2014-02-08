@@ -1,4 +1,4 @@
-# Tac [![Build Status](https://travis-ci.org/kavun/tac.png?branch=master)](https://travis-ci.org/kavun/tac)
+# Tac [![Build Status](https://travis-ci.org/kavun/tac.png?branch=master)](https://travis-ci.org/kavun/tac) [![devDependency Status](https://david-dm.org/kavun/tac/dev-status.png)](https://david-dm.org/kavun/tac#info=devDependencies)
 
 Full viewport Tic Tac Toe game.
 
