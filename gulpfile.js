@@ -8,6 +8,8 @@ var rename        = require('gulp-rename');
 var uglify        = require('gulp-uglify');
 var size          = require('gulp-size');
 var header        = require('gulp-header');
+var bump          = require('gulp-bump');
+var git           = require('gulp-git');
 
 var banner = ['/*!',
 	' * <%= pkg.name %> - <%= pkg.description %>',
@@ -26,12 +28,30 @@ gulp.task('jshint', function () {
 
 gulp.task('build', function () {
 	gulp.src('./src/main.js')
-        .pipe(browserify())
-        .pipe(uglify())
-        .pipe(header(banner, { pkg : pkg } ))
-        .pipe(size())
-        .pipe(rename(pkg.name + '.min.js'))
-        .pipe(gulp.dest('./dist'))
+		.pipe(browserify())
+		.pipe(uglify())
+		.pipe(header(banner, { pkg : pkg } ))
+		.pipe(size())
+		.pipe(rename(pkg.name + '.min.js'))
+		.pipe(gulp.dest('./dist'))
+});
+
+gulp.task('bump', function () {
+	return gulp.src(['./package.json'])
+		.pipe(bump())
+		.pipe(gulp.dest('./'));
+});
+
+gulp.task('tag', ['bump'], function () {
+	var v = 'v' + pkg.version;
+	var message = 'Release ' + v;
+
+  	return gulp.src('./')
+		.pipe(git.commit(message))
+		.pipe(git.tag(v, message))
+		.pipe(git.push('origin', 'master', '--tags'))
+		.pipe(git.push('origin', 'gh-pages', '--tags'))
+		.pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['jshint', 'build']);
