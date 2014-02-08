@@ -5,6 +5,7 @@ Full viewport Tic Tac Toe game.
 ## Build
 ```js
 > npm install -g browserify gulp
+> npm install
 > gulp
 ```
 
