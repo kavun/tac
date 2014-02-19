@@ -100,7 +100,7 @@
 		}.bind(this);
 
 		var handleTie = function () {
-			score.innerHTML = 'tie';
+			score.innerHTML = 'cat';
 			endGame();
 		}.bind(this);
 
